@@ -21,15 +21,6 @@ class AojetTests: XCTestCase {
     super.tearDown()
   }
 
-  func testCompletedPromise() {
-    let p = Promise<Int>(value: 2)
-    let completeExpectation = self.expectation(description: "immediate complete")
-    p.then { result in
-      XCTAssert(result! == 2)
-      completeExpectation.fulfill()
-    }
-    waitForExpectations(timeout: 2, handler: nil)
-  }
 
   func testPerformanceExample() {
     // This is an example of a performance test case.

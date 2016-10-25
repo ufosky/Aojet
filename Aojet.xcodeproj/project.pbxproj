@@ -182,6 +182,7 @@
 		8C5EFE581DB4D51900885B4E /* WeakReferenceCompat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5EFDB91DB4D51800885B4E /* WeakReferenceCompat.swift */; };
 		8C5EFE591DB4D51900885B4E /* WeakReferenceCompat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5EFDB91DB4D51800885B4E /* WeakReferenceCompat.swift */; };
 		8C5EFE5A1DB4D6C600885B4E /* Aojet.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C5EFD571DB4D39700885B4E /* Aojet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C6AC01A1DBCD6F300D7BA31 /* PromiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6AC0191DBCD6F300D7BA31 /* PromiseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -302,6 +303,7 @@
 		8C5EFDB71DB4D51800885B4E /* ThreadDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadDispatcher.swift; sourceTree = "<group>"; };
 		8C5EFDB81DB4D51800885B4E /* ThreadLocalCompat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadLocalCompat.swift; sourceTree = "<group>"; };
 		8C5EFDB91DB4D51800885B4E /* WeakReferenceCompat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakReferenceCompat.swift; sourceTree = "<group>"; };
+		8C6AC0191DBCD6F300D7BA31 /* PromiseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,8 +344,8 @@
 			isa = PBXGroup;
 			children = (
 				8C3F57101DA7348C00FBD824 /* Aojet-iOS */,
-				8C3F57E31DA7373B00FBD824 /* AojetDemo */,
 				8C5EFD561DB4D39700885B4E /* Aojet-Mac */,
+				8C3F57E31DA7373B00FBD824 /* AojetDemo */,
 				8C3F570F1DA7348C00FBD824 /* Products */,
 				8C5EFD5D1DB4D51800885B4E /* Sources */,
 				8C3F571B1DA7348C00FBD824 /* Tests */,
@@ -399,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				8C4563E21DB3CAAE009C90D2 /* AojetTests.swift */,
+				8C6AC0191DBCD6F300D7BA31 /* PromiseTests.swift */,
 			);
 			path = AojetTests;
 			sourceTree = "<group>";
@@ -867,6 +870,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C4563E31DB3CAAE009C90D2 /* AojetTests.swift in Sources */,
+				8C6AC01A1DBCD6F300D7BA31 /* PromiseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1053,6 +1057,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1099,6 +1104,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1109,7 +1115,6 @@
 		8C3F57231DA7348C00FBD824 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1120,14 +1125,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ufosky.Aojet;
 				PRODUCT_NAME = Aojet;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		8C3F57241DA7348C00FBD824 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1138,7 +1141,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ufosky.Aojet;
 				PRODUCT_NAME = Aojet;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1146,11 +1148,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = AojetTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ufosky.AojetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1158,11 +1159,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = AojetTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ufosky.AojetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1174,7 +1174,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ufosky.AojetDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1186,7 +1185,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ufosky.AojetDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1207,7 +1205,6 @@
 				PRODUCT_NAME = Aojet;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1228,7 +1225,6 @@
 				PRODUCT_NAME = Aojet;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
